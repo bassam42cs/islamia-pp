@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:islami_app/config/application_theme_manger.dart';
-import 'package:islami_app/config/setting_provider.dart';
 import 'package:islami_app/layouts/layout_view.dart';
 import 'package:islami_app/moduls/hadeth/page/hadeth_detials_view.dart';
 import 'package:islami_app/moduls/quran/page/quran_view_deteles.dart';
@@ -9,8 +8,7 @@ import 'package:islami_app/moduls/splash/splash_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(ChangeNotifierProvider(
-      create: (context) => SettingProvider(), child: const MyApp()));
+  runApp( MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -21,15 +19,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      localizationsDelegates: const [
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: const [
-        Locale('en'), // English
-        Locale('ar'), //arabic
-      ],
       theme: ApplicationTheme.lightMode,
       themeMode: ThemeMode.light,
       initialRoute: SplashScreen.routeName,

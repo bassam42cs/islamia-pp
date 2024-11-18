@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-class TasbehView extends StatefulWidget {
+class TasbehView extends StatefulWidget    {
   TasbehView({super.key});
 
   @override
